@@ -6,19 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://huitailangdeerzi.github.io">
-  <title>Archives | 王辉的博客</title>
+  <title>王辉的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="代码的搬运工。">
+  <meta name="description" content="#小样本学习title:date: 2019-11-12 12:50:12tags:  算法 小样本学习 论文   Li_Revisiting_Local_Descriptor_Based_Image-To-Class_Measure_for_Few-Shot_Learning_CVPR_2019_paper">
 <meta name="keywords" content="论文，深度学习，行为检测，杂记">
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:title" content="王辉的博客">
-<meta property="og:url" content="https://huitailangdeerzi.github.io/archives/index.html">
+<meta property="og:url" content="https://huitailangdeerzi.github.io/2019/11/12/小样本学习/小样本学习1_paper/小样本学习_paper_1/index.html">
 <meta property="og:site_name" content="王辉的博客">
-<meta property="og:description" content="代码的搬运工。">
+<meta property="og:description" content="#小样本学习title:date: 2019-11-12 12:50:12tags:  算法 小样本学习 论文   Li_Revisiting_Local_Descriptor_Based_Image-To-Class_Measure_for_Few-Shot_Learning_CVPR_2019_paper">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://huitailangdeerzi.github.io/img/1.png">
+<meta property="og:image" content="https://huitailangdeerzi.github.io/img/2.png">
+<meta property="og:image" content="https://huitailangdeerzi.github.io/img/3.png">
+<meta property="og:image" content="https://huitailangdeerzi.github.io/img/4.png">
+<meta property="og:updated_time" content="2019-11-12T04:53:31.054Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="王辉的博客">
-<meta name="twitter:description" content="代码的搬运工。">
+<meta name="twitter:description" content="#小样本学习title:date: 2019-11-12 12:50:12tags:  算法 小样本学习 论文   Li_Revisiting_Local_Descriptor_Based_Image-To-Class_Measure_for_Few-Shot_Learning_CVPR_2019_paper">
+<meta name="twitter:image" content="https://huitailangdeerzi.github.io/img/1.png">
   
     <link rel="alternative" href="/atom.xml" title="王辉的博客" type="application/atom+xml">
   
@@ -158,197 +164,198 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-小样本学习/小样本学习1_paper/小样本学习_paper_1" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="小样本学习"><a href="#小样本学习" class="headerlink" title="#小样本学习"></a>#小样本学习</h2><p>title:<br>date: 2019-11-12 12:50:12<br>tags:</p>
+<ul>
+<li>算法</li>
+<li>小样本学习</li>
+<li>论文</li>
+</ul>
+<hr>
+<p>Li_Revisiting_Local_Descriptor_Based_Image-To-Class_Measure_for_Few-Shot_Learning_CVPR_2019_paper<br><a id="more"></a></p>
+<p>##Meta-Learning</p>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      <!--$表示行内元素，$$表示块状元素 -->
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+<!--加载MathJax的最新文件， async表示异步加载进来 -->
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js">
+</script>
+
+
+
+
+<p>##the proposed method</p>
+<h3 id="3-1-Problem-Formulation-问题描述"><a href="#3-1-Problem-Formulation-问题描述" class="headerlink" title="3.1 Problem Formulation 问题描述"></a>3.1 Problem Formulation 问题描述</h3><p><strong>第一段</strong><br><br>&emsp;&emsp;S代表一个支撑的集合（support set），表示有C个图片类型，并且每个类对应了K个有标签的样本。<br></p>
+<p>&emsp;&emsp;给定一个集合Q，小样本学习主要是根据集合S，将Q中未标记的样本进行分类。这种设置也被称之为C-way K-shot分类问题。<br></p>
+<p>&nbsp;&nbsp;不幸的，当S中每个类别只包含很少的样本，很难去有效的学习一个模型，来对Q数据集中的样本进行分类。<br></p>
+<p>&emsp;&emsp;通常，文献采用一个辅助的集合A，通过迁移学习来改善在Q上的分类。<br></p>
+<p>&emsp;&emsp;需要注意的是，集合A包含了大量类和标记样本，但相对于集合S，他有一个不相交的类标签空间。<br></p>
+<p><strong>第二段</strong><br><br>&emsp;&emsp;在文献中，已经证明The episodic training mechanism[22]方法是一种有效的方法，它可以从集合A中学习到可迁移的知识，并且，这种方法也会被用到本文的工作中。<br><br>&emsp;&emsp;具体来说，在每次迭代中，通过模拟小样本学习任务，构造一个片段（episode）来训练分类模型。<br><br>&emsp;&emsp;这个（episode）片段是由支撑集 A<sub>s</sub> 和查询集A<sub>Q</sub>组成，其中A<sub>s</sub>和A<sub>Q</sub>是从辅助集合A中随机采样而来的。<br><br>&emsp;&emsp;</p>
+<p>&emsp;&emsp;换句话说，A<sub>s</sub>中正好有C个类，并且每个类中有K个样本。<br><br>&emsp;&emsp;在训练过程中，将构建数万episodic(片段)来训练分类模型，即episodic训练。<br><br>&emsp;&emsp;在测试阶段，利用支撑集S，学习后的模型可以直接用于对Q中的每个图像进行分类。<br></p>
+<h3 id="3-2-Motivation-from-the-NBNN-Approach"><a href="#3-2-Motivation-from-the-NBNN-Approach" class="headerlink" title="3.2 Motivation from the NBNN Approach"></a>3.2 Motivation from the NBNN Approach</h3><p><strong>第一段</strong><br><br>&emsp;&emsp;这项工作很大程度上受到了[1]中朴素贝叶斯最近邻（NBNN）方法的启发。NBNN的两个关键的观测如下所述，并且我们证明它们可以直接适用于小样本学习。<br><br><strong>第二段</strong><br><br>&emsp;&emsp;首先，对于当时在图像分类中的流行的特征包模型（bag-of-features），通常将局部不变特征量化为可视单词，以生成单词在图像中的分布（例如，通过和池化获得的直方图）。在[1]中观察到，由于量化误差，这样的图像级特征 representation 可能会严重地丢失判别信息。如果有足够的训练样本，后续的学习过程（例如，通过支持向量机）可以从这种损失中恢复，仍然显示出令人满意的分类性能。然而，当训练样本不足时，这种损失是不可恢复的，并导致分类效果很差。<br><br><strong>第三段</strong><br><br>&emsp;&emsp;相对于NBNN，样本稀缺性问题对少样本学习的影响更大。现有的方法通常对最后的卷积特征映射进行池化，(例如，通过全局平均池化或全连接层)，来得到一个最终分类的图像级别的表征representation，在这种情况下，这种信息丢失也会发生，并且是不可恢复的。<br><br><strong>第四段</strong><br><br>&emsp;&emsp;第二，正如在[1]中进一步观察到的，使用两幅图像的局部不变特征，而不是它们的图像级特征（image-level representations）。利用image-level representations在进行分类时，会测量图像到图像（image-to-image）的相似性，这种方法仍然会导致较差的结果。这是因为图像到图像(image-to-image)的相似性不能泛化到训练样本之外。当训练样本数量较少时，由于类内差异或背景杂乱的影响，查询图像可能与同一类的任何训练样本都不同。 <strong>因此，应该使用从图像到类的度量(image-to-class measure)方法。具体来说，来自同一类别所有训练样本的局部不变特征(the local invariant features)被收集到一个pool中。该方法评估查询图像的局部（local）特征到每个类池化（pool）的接近度 ( 例如，通过（nearest-neighbor search）最近邻搜索)，以此来进行分类。</strong><br></p>
+<p><strong>第四段</strong><br><br>&emsp;&emsp;同样，这一观察结果也适用于小样本学习。从本质上讲，上述的图像到类的度量（image-to-class measure ）方法打破了同一类中训练图像的边界，并且使用它们共同的局部特征来为类别提供更丰富和更灵活的表示（representations）。正如在[1]中所指出的，这种设置可以由一个事实来证明，<strong>即一个新图像可以通过使用同一类中其他图像的片段来大致“合成”（即：视觉模式在同一类图像之间的可交换性)。</strong><br></p>
+<h3 id="3-3-The-Proposed-DN4-Framewor"><a href="#3-3-The-Proposed-DN4-Framewor" class="headerlink" title="3.3. The Proposed DN4 Framewor"></a>3.3. The Proposed DN4 Framewor</h3><p><strong>第一段</strong><br><br>&emsp;&emsp;上述分析促使我们重新审视在小样本学习中最终分类的方法，并重新思考NBNN方法。这就引出了我们所提出的深度近邻神经网络(简称DN4)框架。<br><br><strong>第二段</strong><br><br>&emsp;&emsp;如图1所示,DN4主要包括两个部分 ： 深度嵌入模块（a deep embedding module）Ψ 和一个图像到类的度量模块（image-to-class measure module）Φ。前者学习所有图像的深度局部描述符（deep local descriptors ）。使用学到的描述符（descriptors ），后者计算前面提到的图像到类的度量方法。重要的是，这两个模块被集成到一个统一的网络中，并从头开始以端到端的方式进行训练。另外，值得注意的是，所设计的图像到类的模块（image-to-class module ）可以很容易地与任何深度嵌入模块（deep embedding module）一起工作。<br><br><strong>第三段</strong><br><br>&emsp;&emsp;Deep embedding module深度嵌入模块。模块 Ψ 经常学习查询和支持图像集的特征表示。任何合适的CNN都可以使用。注意,Ψ只包含卷积层但没有全连接层,因为我们只需要用深度局部描述符（deep local descriptors ）来计算image-to-class。简而言之,给定一个图像X , Ψ(X)是一个$h\times w\times$ d维的张量,它可以被视为(m = hw) m个d维局部描述符，如以下公式所表示：<br><br>&emsp;&emsp;<img src="/img/1.png" width="50%"><br><br>&emsp;&emsp;其中 x<sub>i</sub> 是第 i 个深度局部描述符(deep local descriptor.)。在我们的实验中，给定一幅分辨率为84×84的图像，我们可以得到h = w = 21, d = 64。这意味着每个图像总共有441个深度局部描述符。<br><br><strong>第四段</strong><br><br>&emsp;&emsp;Image-to-Class module模块。模块Φ使用深度局部描述符（deep local descriptors ）（是从一个类的所有训练图片得来的），为这个类构造了一个局部描述符空间（ local descriptor space）。在这个空间中，我们通过k-NN计算查询图像与这个类之间的image-to-class的相似性(或距离)，如[1]所示。<br><br>&emsp;&emsp;具体来说，通过模块Ψ，给定查询图像将被编码为Ψ(q) = [x<sub>1</sub>,…,x<sub>m</sub>]∈R<sup>d×m</sup>。每个描述符x<sub>i</sub>，我们会在c类别中找到它的 k-nearest neighbors ：<img src="/img/2.png" width="10%">。然后我们计算每个 x<sub>i</sub> 和<img src="/img/3.png" width="4%">的相似性 ，mk个相似性的总和可以作为查询集 q 和类别 c 之间image-to-class的相似性。从数学上来看,image-to-class度量可以很容易地表示为如下公式。<br><br>&emsp;&emsp;公式<img src="/img/4.png"><br><br>&emsp;&emsp;其中cos（·）表示余弦相似性。当然也可以使用其他的相似性或距离函数。<br><br>&emsp;&emsp;值得注意的是，在计算效率方面，与聚焦于[1]的一般图像分类相比，图像到类度量（ image-to-class measure ）似乎更适合于小样本分类。在NBNN中，从大量的局部描述符pool中寻找k近邻（k-nearest neighbors ）所导致的主要计算问题，由于在小样本设置中训练样本的数量要少得多，现在计算问题已经被大大削弱了。这使得所提出的框架具有较高的计算效率。此外，与NBNN相比，DN4将表现得更好，因为它所用的 深层特性表示（deep feature representations）比NBNN中使用的手工特性更强大。<br><br>&emsp;&emsp;最后，值得一提的是，DN4中的image-to-class模块是非参数的。所以如果不考虑 Ψ 嵌入模块,整个分类模型是非参数的。由于非参数模型不涉及参数学习，因此参数化的小样本学习方法中的过拟合问题(例如，在图像级表示上（image-level representation）学习全连接层)也可以得到一定程度的缓解。<br></p>
+<h3 id="3-4-Network-Architecture（网络的构建）"><a href="#3-4-Network-Architecture（网络的构建）" class="headerlink" title="3.4. Network Architecture（网络的构建）"></a>3.4. Network Architecture（网络的构建）</h3><p>&emsp;&emsp;为了与现有最先进的方法进行公平的比较，我们采用一种常用的四层卷积神经网络作为编码模块（embedding module）。<strong>它包含四个卷积块，每个卷积块由一个卷积层、一个批处理归一化层和一个 Leaky ReLU 层组成</strong>。此外，对于前两个卷积块，还分别附加了一个2×2 max-pooling层。由于每个卷积层有64个大小为3×3的滤波器，所以这个编码网络（embedding network）被命名为Conv-64F。对于image-to-class模块，唯一的超参数是参数k，我们将在实验中讨论。<br><br>&emsp;&emsp;在每一次迭代训练中，我们将一个支持集S和一个查询图像q输入到我们的模型中。通过编码模块Ψ，我们得到了所有这些图像的所有深度局部表示（deep local representations）。然后通过模块 Φ，用公式（2）计算q与各类之间的图像到类的相似度（image-to-class similarity ）。对于C-way K-shot任务，我们可以得到一个相似向量z∈R<sup>C</sup>。与最大分量z对应的类别将是q的预测类。<br></p>
+<h2 id="4-Experimental-Results-实验结果"><a href="#4-Experimental-Results-实验结果" class="headerlink" title="4. Experimental Results(实验结果)"></a>4. Experimental Results(实验结果)</h2><p><strong>第一段</strong><br><br>&emsp;&emsp;本节的主要目的是研究两个有趣的问题:(1)在没有 episodic training训练的情况下，基于NBNN预训练的深度特征是如何在小样本学习中发挥作用的?(2)我们提出的DN4框架，即一个基于CNN的NBNN以端到端的episodic training方式，在小样本学习上表现如何?<br></p>
+<h3 id="4-1-Datasets（数据集）"><a href="#4-1-Datasets（数据集）" class="headerlink" title="4.1. Datasets（数据集）"></a>4.1. Datasets（数据集）</h3><p>&emsp;&emsp;我们在以下四个基准数据集上进行了所有的实验。<br><br>&emsp;&emsp;miniImageNet。作为ImageNet[15]的一个迷你版本，这个数据集[22]包含100个类，每个类有600个图像，每个图像的分辨率为84×84。根据[14]中使用的分割(splits)，我们分别使用64、16和20个类进行训练(辅助)、验证和测试。<br><br>&emsp;&emsp;Stanford Dogs这个数据集[7]最初用于细粒度图像分类，包括120个品种(类别)的狗，总共有20580张图像。在这里，我们对这个数据集进行细粒度（ ﬁne-grained ）的少样本分类任务，分别取70、20、30个类别进行训练(辅助)、验证和测试。<br><br>&emsp;&emsp;Stanford Cars此数据集[10]也是细粒度分类任务的基准数据集，包括196个类别的汽车，总共有16,185张图片。类似地，这个数据集中的130个，17个和49个类别被划分为训练(辅助)、验证和测试。<br><br>&emsp;&emsp;CUB-200这个数据集[23]包含了来自200种鸟类的6033张图片。以类似的方式，我们选择了130、20、50个类别进行培训(辅助)、验证和测试。<br><br>&emsp;&emsp;对于最后三个细粒度数据集（ ﬁne-grained datasets,），这些数据集中的所有图像，都被调整为像miniImageNet中，84×84的分辨率。<br></p>
+<h3 id="4-2-Experimental-Setting-实现设置"><a href="#4-2-Experimental-Setting-实现设置" class="headerlink" title="4.2. Experimental Setting(实现设置)"></a>4.2. Experimental Setting(实现设置)</h3><p>&emsp;&emsp;所有实验均围绕上述数据集上的C-way K-shot分类任务进行。具体来说，所有这些数据集都将执行5-way 1-shot和5-way 5-shot分类任务。在训练过程中，我们随机采样并构建300,000 episodes，通过( episodic training mechanism)训练机制来训练我们所有的模型。<br><strong>在每一个 episode中，除了每个类中的 K 张支持图片(shots)外，还会从每个类中选择15张和10张查询图片，分别进行1-shot和5-shot设置</strong>。换句话说，对于一个5-way 1-shot任务，在一个训练集中(episode)将有5个支持图像和75个查询图像。为了训练我们的模型，我们采用Adam算法[8]，初始学习率为1×10<sup>−3</sup>，每100,000次减少一半。<br><br>&emsp;&emsp;在测试过程中，我们从测试集中随机采样了600 episodes，并以top-1的平均准确率作为评价标准。此过程将重复五次，并报告最终的平均准确度。此外，还报告了95%置信区间。值得注意的是，我们所有的模型都是以端到端方式从头开始训练的，在测试阶段不需要进行微调。<br></p>
+<h3 id="4-3-Comparison-Methods-比较的方法"><a href="#4-3-Comparison-Methods-比较的方法" class="headerlink" title="4.3. Comparison Methods(比较的方法)"></a>4.3. Comparison Methods(比较的方法)</h3><p>&emsp;&emsp;Baseline methods为了说明上述数据集的基本分类性能，我们实现了一个基线方法k-NN(深度全局特征)。<strong>特别地，我们在相应的训练(辅助)数据集上,采用基本的编码网络Conv-64f，并附加三个额外的FC层来训练一个分类网络。在测试过程中，我们使用这个预先训练好的网络从最后一个FC层中提取特征，并使用一个k-NN分类器得到最终的分类结果。</strong>此外，为了回答第4节开始的第一个问题，我们使用从上述k-NN (Deep global features)方法截断的预训练的Conv-64F,重新实现了NBNN算法[1]。这种新的NBNN算法使用深度局部描述符代替手工描述符(即:SIFT)，称为NBNN(深度局部特征)。<br><br>&emsp;&emsp;Metric-learning based methods.基于Metric-learning的方法。由于我们的方法属于度量学习分支，我们主要将我们的模型与四种最先进的基于度量学习的模型进行比较，包括匹配网FCE(Matching Nets FCE)[22]、原型网(Prototypical Nets)[17]、关系网(Relation Net)[25]和图神经网络(Graph Neural Network)(GNN)[4]。值得注意的是，我们使用了Conv-64F作为其编码模块来重新运行GNN模型，因为原始GNN采用了不同的编码模块Conv-256F，该模块也有四个卷积层，但相应层分别有64、96、128和256个过滤器。此外，我们通过相同的5路训练设置( 5-way training setting )重新运行原型网(Prototypical Nets)，代替了原来的20路训练设置( 20-way training setting)，以进行公平的比较。<br></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/12/小样本学习/小样本学习1_paper/小样本学习_paper_1/" class="archive-article-date">
-  	<time datetime="2019-11-12T04:42:42.109Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-12</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/06/小样本学习/新文档/" class="archive-article-date">
-  	<time datetime="2019-11-06T06:46:04.318Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/06/小样本学习/新文档/">Hello World哈哈哈哈哈</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/06/小样本学习/王辉第一个博客/" class="archive-article-date">
-  	<time datetime="2019-11-06T05:17:28.971Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-06</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/06/小样本学习/hello-world/" class="archive-article-date">
-  	<time datetime="2019-11-06T05:17:28.959Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/06/小样本学习/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
       
-        </div></section>
+
       
+
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/20/小样本学习/hello/" class="archive-article-date">
-  	<time datetime="2018-03-20T08:04:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/20/小样本学习/hello/">hello</a>
-    </h1>
-  
+      </div>
+    </span>
+  </div>
+</div>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">deep</a>
-        		</li>
-      		
-		</ul>
-	</div>
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://huitailangdeerzi.github.io/2019/11/12/小样本学习/小样本学习1_paper/小样本学习_paper_1/" alt="微信分享二维码">
+    </div>
+</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/20/小样本学习/新文档22/" class="archive-article-date">
-  	<time datetime="2018-03-20T08:04:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-20</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/11/06/小样本学习/新文档/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World哈哈哈哈哈</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/20/小样本学习/新文档22/">hello王辉</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#小样本学习"><span class="toc-number">1.</span> <span class="toc-text">#小样本学习</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-Problem-Formulation-问题描述"><span class="toc-number">1.1.</span> <span class="toc-text">3.1 Problem Formulation 问题描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-Motivation-from-the-NBNN-Approach"><span class="toc-number">1.2.</span> <span class="toc-text">3.2 Motivation from the NBNN Approach</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-The-Proposed-DN4-Framewor"><span class="toc-number">1.3.</span> <span class="toc-text">3.3. The Proposed DN4 Framewor</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-Network-Architecture（网络的构建）"><span class="toc-number">1.4.</span> <span class="toc-text">3.4. Network Architecture（网络的构建）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-Experimental-Results-实验结果"><span class="toc-number">2.</span> <span class="toc-text">4. Experimental Results(实验结果)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-Datasets（数据集）"><span class="toc-number">2.1.</span> <span class="toc-text">4.1. Datasets（数据集）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-Experimental-Setting-实现设置"><span class="toc-number">2.2.</span> <span class="toc-text">4.2. Experimental Setting(实现设置)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-Comparison-Methods-比较的方法"><span class="toc-number">2.3.</span> <span class="toc-text">4.3. Comparison Methods(比较的方法)</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
   
-    </div></section>
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -371,8 +378,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
