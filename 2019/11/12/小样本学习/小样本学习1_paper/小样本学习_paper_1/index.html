@@ -6,24 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://huitailangdeerzi.github.io">
-  <title>王辉的博客</title>
+  <title>小样本学习论文 | 王辉的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="#小样本学习title:date: 2019-11-12 12:50:12tags:  算法 小样本学习 论文   Li_Revisiting_Local_Descriptor_Based_Image-To-Class_Measure_for_Few-Shot_Learning_CVPR_2019_paper">
-<meta name="keywords" content="论文，深度学习，行为检测，杂记">
+  <meta name="description" content="Li_Revisiting_Local_Descriptor_Based_Image-To-Class_Measure_for_Few-Shot_Learning_CVPR_2019_paper">
+<meta name="keywords" content="算法,小样本学习,论文">
 <meta property="og:type" content="article">
-<meta property="og:title" content="王辉的博客">
+<meta property="og:title" content="小样本学习论文">
 <meta property="og:url" content="https://huitailangdeerzi.github.io/2019/11/12/小样本学习/小样本学习1_paper/小样本学习_paper_1/index.html">
 <meta property="og:site_name" content="王辉的博客">
-<meta property="og:description" content="#小样本学习title:date: 2019-11-12 12:50:12tags:  算法 小样本学习 论文   Li_Revisiting_Local_Descriptor_Based_Image-To-Class_Measure_for_Few-Shot_Learning_CVPR_2019_paper">
+<meta property="og:description" content="Li_Revisiting_Local_Descriptor_Based_Image-To-Class_Measure_for_Few-Shot_Learning_CVPR_2019_paper">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://huitailangdeerzi.github.io/img/1.png">
 <meta property="og:image" content="https://huitailangdeerzi.github.io/img/2.png">
 <meta property="og:image" content="https://huitailangdeerzi.github.io/img/3.png">
 <meta property="og:image" content="https://huitailangdeerzi.github.io/img/4.png">
-<meta property="og:updated_time" content="2019-11-12T04:53:31.054Z">
+<meta property="og:updated_time" content="2019-11-12T05:00:20.911Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="王辉的博客">
-<meta name="twitter:description" content="#小样本学习title:date: 2019-11-12 12:50:12tags:  算法 小样本学习 论文   Li_Revisiting_Local_Descriptor_Based_Image-To-Class_Measure_for_Few-Shot_Learning_CVPR_2019_paper">
+<meta name="twitter:title" content="小样本学习论文">
+<meta name="twitter:description" content="Li_Revisiting_Local_Descriptor_Based_Image-To-Class_Measure_for_Few-Shot_Learning_CVPR_2019_paper">
 <meta name="twitter:image" content="https://huitailangdeerzi.github.io/img/1.png">
   
     <link rel="alternative" href="/atom.xml" title="王辉的博客" type="application/atom+xml">
@@ -167,17 +167,24 @@
             <article id="post-小样本学习/小样本学习1_paper/小样本学习_paper_1" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      小样本学习论文
+    </h1>
+  
+
+        
+        <a href="/2019/11/12/小样本学习/小样本学习1_paper/小样本学习_paper_1/" class="archive-article-date">
+  	<time datetime="2019-11-12T04:50:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-12</time>
+</a>
+        
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="小样本学习"><a href="#小样本学习" class="headerlink" title="#小样本学习"></a>#小样本学习</h2><p>title:<br>date: 2019-11-12 12:50:12<br>tags:</p>
-<ul>
-<li>算法</li>
-<li>小样本学习</li>
-<li>论文</li>
-</ul>
-<hr>
-<p>Li_Revisiting_Local_Descriptor_Based_Image-To-Class_Measure_for_Few-Shot_Learning_CVPR_2019_paper<br><a id="more"></a></p>
-<p>##Meta-Learning</p>
+        <p>Li_Revisiting_Local_Descriptor_Based_Image-To-Class_Measure_for_Few-Shot_Learning_CVPR_2019_paper<br><a id="more"></a></p>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
@@ -198,8 +205,7 @@
 
 
 
-<p>##the proposed method</p>
-<h3 id="3-1-Problem-Formulation-问题描述"><a href="#3-1-Problem-Formulation-问题描述" class="headerlink" title="3.1 Problem Formulation 问题描述"></a>3.1 Problem Formulation 问题描述</h3><p><strong>第一段</strong><br><br>&emsp;&emsp;S代表一个支撑的集合（support set），表示有C个图片类型，并且每个类对应了K个有标签的样本。<br></p>
+<h2 id="the-proposed-method"><a href="#the-proposed-method" class="headerlink" title="the proposed method"></a>the proposed method</h2><h3 id="3-1-Problem-Formulation-问题描述"><a href="#3-1-Problem-Formulation-问题描述" class="headerlink" title="3.1 Problem Formulation 问题描述"></a>3.1 Problem Formulation 问题描述</h3><p><strong>第一段</strong><br><br>&emsp;&emsp;S代表一个支撑的集合（support set），表示有C个图片类型，并且每个类对应了K个有标签的样本。<br></p>
 <p>&emsp;&emsp;给定一个集合Q，小样本学习主要是根据集合S，将Q中未标记的样本进行分类。这种设置也被称之为C-way K-shot分类问题。<br></p>
 <p>&nbsp;&nbsp;不幸的，当S中每个类别只包含很少的样本，很难去有效的学习一个模型，来对Q数据集中的样本进行分类。<br></p>
 <p>&emsp;&emsp;通常，文献采用一个辅助的集合A，通过迁移学习来改善在Q上的分类。<br></p>
@@ -243,6 +249,25 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">小样本学习</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">论文</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -336,7 +361,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#小样本学习"><span class="toc-number">1.</span> <span class="toc-text">#小样本学习</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-Problem-Formulation-问题描述"><span class="toc-number">1.1.</span> <span class="toc-text">3.1 Problem Formulation 问题描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-Motivation-from-the-NBNN-Approach"><span class="toc-number">1.2.</span> <span class="toc-text">3.2 Motivation from the NBNN Approach</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-The-Proposed-DN4-Framewor"><span class="toc-number">1.3.</span> <span class="toc-text">3.3. The Proposed DN4 Framewor</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-Network-Architecture（网络的构建）"><span class="toc-number">1.4.</span> <span class="toc-text">3.4. Network Architecture（网络的构建）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-Experimental-Results-实验结果"><span class="toc-number">2.</span> <span class="toc-text">4. Experimental Results(实验结果)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-Datasets（数据集）"><span class="toc-number">2.1.</span> <span class="toc-text">4.1. Datasets（数据集）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-Experimental-Setting-实现设置"><span class="toc-number">2.2.</span> <span class="toc-text">4.2. Experimental Setting(实现设置)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-Comparison-Methods-比较的方法"><span class="toc-number">2.3.</span> <span class="toc-text">4.3. Comparison Methods(比较的方法)</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#the-proposed-method"><span class="toc-number">1.</span> <span class="toc-text">the proposed method</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-Problem-Formulation-问题描述"><span class="toc-number">1.1.</span> <span class="toc-text">3.1 Problem Formulation 问题描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-Motivation-from-the-NBNN-Approach"><span class="toc-number">1.2.</span> <span class="toc-text">3.2 Motivation from the NBNN Approach</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-The-Proposed-DN4-Framewor"><span class="toc-number">1.3.</span> <span class="toc-text">3.3. The Proposed DN4 Framewor</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-Network-Architecture（网络的构建）"><span class="toc-number">1.4.</span> <span class="toc-text">3.4. Network Architecture（网络的构建）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-Experimental-Results-实验结果"><span class="toc-number">2.</span> <span class="toc-text">4. Experimental Results(实验结果)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-Datasets（数据集）"><span class="toc-number">2.1.</span> <span class="toc-text">4.1. Datasets（数据集）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-Experimental-Setting-实现设置"><span class="toc-number">2.2.</span> <span class="toc-text">4.2. Experimental Setting(实现设置)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-Comparison-Methods-比较的方法"><span class="toc-number">2.3.</span> <span class="toc-text">4.3. Comparison Methods(比较的方法)</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -453,6 +478,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">deep</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">小样本学习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">论文</a>
               </li>
             
             <div class="clearfix"></div>
