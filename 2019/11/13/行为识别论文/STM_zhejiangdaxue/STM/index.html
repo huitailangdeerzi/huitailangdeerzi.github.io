@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://huitailangdeerzi.github.io">
-  <title>hello王辉 | 王辉的博客</title>
+  <title>行为识别论文 | 王辉的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="代码的搬运工。">
-<meta name="keywords" content="论文，深度学习，行为检测，杂记">
+  <meta name="description" content="STM: Spatio Temporal and Motion Encoding for Action RecognitionSTM:动作识别的时空和动作编码">
+<meta name="keywords" content="算法,行为识别,论文">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hello王辉">
-<meta property="og:url" content="https://huitailangdeerzi.github.io/2018/03/20/小样本学习/新文档22/index.html">
+<meta property="og:title" content="行为识别论文">
+<meta property="og:url" content="https://huitailangdeerzi.github.io/2019/11/13/行为识别论文/STM_zhejiangdaxue/STM/index.html">
 <meta property="og:site_name" content="王辉的博客">
-<meta property="og:description" content="代码的搬运工。">
+<meta property="og:description" content="STM: Spatio Temporal and Motion Encoding for Action RecognitionSTM:动作识别的时空和动作编码">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-06T06:50:12.454Z">
+<meta property="og:updated_time" content="2019-11-13T12:09:57.693Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hello王辉">
-<meta name="twitter:description" content="代码的搬运工。">
+<meta name="twitter:title" content="行为识别论文">
+<meta name="twitter:description" content="STM: Spatio Temporal and Motion Encoding for Action RecognitionSTM:动作识别的时空和动作编码">
   
     <link rel="alternative" href="/atom.xml" title="王辉的博客" type="application/atom+xml">
   
@@ -159,27 +159,74 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-小样本学习/新文档22" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-行为识别论文/STM_zhejiangdaxue/STM" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      hello王辉
+      行为识别论文
     </h1>
   
 
         
-        <a href="/2018/03/20/小样本学习/新文档22/" class="archive-article-date">
-  	<time datetime="2018-03-20T08:04:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-20</time>
+        <a href="/2019/11/13/行为识别论文/STM_zhejiangdaxue/STM/" class="archive-article-date">
+  	<time datetime="2019-11-13T01:59:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-13</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="STM-Spatio-Temporal-and-Motion-Encoding-for-Action-Recognition"><a href="#STM-Spatio-Temporal-and-Motion-Encoding-for-Action-Recognition" class="headerlink" title="STM: Spatio Temporal and Motion Encoding for Action Recognition"></a>STM: Spatio Temporal and Motion Encoding for Action Recognition</h1><p>STM:动作识别的时空和动作编码</p>
+<a id="more"></a>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      <!--$表示行内元素，$$表示块状元素 -->
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+<!--加载MathJax的最新文件， async表示异步加载进来 -->
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js">
+</script>
+
+<h2 id="Abstract摘要"><a href="#Abstract摘要" class="headerlink" title="Abstract摘要"></a>Abstract摘要</h2><p>&emsp;&emsp;时空特征和运动特征是视频动作识别的两个重要互补信息。目前最先进的方法是采用3D CNN流来学习时空特征，另一种流来学习运动特征。在这项工作中，我们的目标是在一个统一的2D框架中有效地编码这两个特征。为此，我们首先提出了一个<strong>STM块</strong>，它包含一个信道方向的时空模块<strong>(Channel-wise SpatioTemporal Module–CSTM)</strong>来表示时空特征，以及一个信道方向的运动模块a <strong>（Channel-wise Motion<br>Module–CMM)</strong>来有效地编码运动特征。然后，我们将ResNet体系结构中的原始残差块（residual blocks）替换为STM blcoks，这样通过引入非常有限的额外计算成本来形成一个简单而有效的STM网络。大量的实验表明，不论是在时序相关的数据集(即Something-Something v1 &amp;v2 and Jester）还是场景相关的数据集（即 Kinetics400,UCF-101和HMDB-51)上，所提出的STM网络通过将时空和运动特征编码在一起，其性能优于现在最先进的方法。<br></p>
+<h2 id="1-Introduction-简介"><a href="#1-Introduction-简介" class="headerlink" title="1.Introduction 简介"></a>1.Introduction 简介</h2><p>&emsp;&emsp;随着云计算和边缘计算的快速发展，我们已经习惯了参与社交平台，生活在摄像头下。与此同时，安全、交通等行业收集了大量的视频，这些视频包含了大量的信息，涉及到人们的行为、交通等方面。海量的视频信息吸引了越来越多的研究者对视频理解领域（video understanding field）进行研究。视频理解的第一步是动作识别，动作识别的目的是识别视频中的人类动作。<strong>动作识别中最重要的特征是时空特征和运动特征，时空特征编码不同时间戳的空间特征关系，运动特征表示相邻帧之间的运动特征。</strong><br></p>
+<p>&emsp;&emsp;现有的动作识别方法可归纳为两类。第一种是基于双流神经网络[10,33,36,9]，它由以RGB帧为输入的RGB流和以光流为输入的流组成。在不考虑时序信息的情况下，空间流对外观特征(而非时空特征)进行建模。流（The flow stream ）通常被称为时间流，用来模拟时序线索。<strong>然而，我们认为将流（The flow stream ）称为时间流（temporal stream）是不准确的，因为光流仅仅代表了相邻帧之间的运动特征，而且该流的结构与2D CNN的空间流几乎相同。</strong> 因此，该流（flow stream）缺乏捕获长范围的时序关系的能力。<strong>此外，光流的提取在时间和空间上都是昂贵的，这限制了在现实世界中大量的工业应用。</strong><br></p>
+<p>&emsp;&emsp;另一类是基于三维卷积网络(3D convolutional networks, 3D CNNs)的方法，用于捕捉时空特征[27,2,24,3]。三维卷积得益于扩展的时间维，能够同时表示时间特征和空间特征。利用叠加的三维卷积，三维神经网络( 3D CNNs)可以捕获长范围的（long-range）时序关系。<strong>近年来，随着诸如Kinetics[2]等大型（large-scale）视频数据集的发布，对该框架进行大量参数优化成为热点。</strong> 在大规模视频数据集预训练的帮助下，基于3D CNN的方法取得了优于基于2D CNN的方法的性能。<strong>然而，虽然3D CNN可以直接从RGB输入对时空信息进行建模，但许多方法[29,2]仍然整合了一个独立的光流运动流（independent optical-flow motion stream）</strong>，利用运动特征进一步提高性能。因此，这两个特征在动作识别中是互补的（相辅相成的）。<strong>然而，将卷积核（convolution kernel ）从二维扩展到三维，并利用双流结构，将不可避免地增加一个数量级的计算成本，这限制了他的实际应用。</strong> <br></p>
+<p>&emsp;&emsp;受上述观察的启发，我们提出了一种简单而有效的方法，<strong>即STM网络，将时空和运动特征整合到一个统一的2D CNN框架中，不需要任何3D卷积和光流的预计算</strong>。在给定输入特征图的情况下，我们采用信道方向的时空模块<strong>(a Channel-wise Spatiotemporal Module–CSTM)</strong> 表示时空特征，采用信道方向的运动模块<strong>(Channel-wise Motion Module–CMM)</strong>对运动特征进行编码。我们还插入一个标识映射路径，将它们组合为一个名为STM block的块。<strong>STM block可以很容易地插入到现有的ResNet[13]架构中，替换了原有的residual block，形成可忽略额外参数的STM网络</strong>。如图1所示，我们使用CSTM和CMM特征来可视化我们的STM块。 <strong>相对于原始的输入特征，CSTM主要学习了动作交互中主要对象部分的时空特征。对于CMM来说，它就像光流一样捕捉具有不同边缘的运动特征。</strong> 我们工作的主要贡献可以概括如下:<br></p>
+<ul>
+<li><p>我们提出了一个信道方向的时空模块(CSTM)和一个信道方向的运动模块(CMM)，在一个统一的2D CNN框架中对互补的时空和运动特征进行编码。<br></p>
+</li>
+<li><p>一个简单而有效的STM网络和STM块被提出，并且在引入非常有限的额外的计算成本的前提下，STM blocks可以插入到现有的ResNet架构。</p>
+</li>
+<li><p>大量的实验表明，通过将时空和运动特征结合在一起，在一些公共基准数据集上，包括somesome-thing[11]、Kinetics[2]、Jester[1]、UCF101[23]和HMDB-51[17]，我们的方法表现优于最先进的方法。</p>
+</li>
+</ul>
+<h2 id="2-Related-Works（相关工作）"><a href="#2-Related-Works（相关工作）" class="headerlink" title="2. Related Works（相关工作）"></a>2. Related Works（相关工作）</h2><p>&emsp;&emsp;随着深度卷积网络在计算机视觉领域的巨大成功，大量基于cnn的动作识别方法被提出，并逐渐超越了传统方法的性能[30,31]。一系列的进展(进步)都是采用2D CNNs作为主干，通过简单地聚合帧级预测[16]对视频进行分类。<strong>然而，这些方法仅仅对每一帧的外观特征进行独立建模，而忽略了帧间的动态变化，导致在识别时间相关视频时性能较差</strong>。为了解决上述缺点，基于双流的方法[10,33,36,3,9]被引入，其主要是用两个网络分别对外观（appearance）和动态（dynamics）建模，并通过中间或最后融合两个流。<strong>在这些方法中，Simonyan等人[22]首先提出了同时具有时空网络的 双流卷积神经网络结构（two-stream ConvNet architecture）。时序段网络(TSN)[33]提出了一种双流结构的稀疏时间采样策略，并在最后通过加权平均将两流融合在一起。</strong> Feichtenhofer等[8,9]研究了两个流中间的融合策略，以获得时空特征。然而，这些类型的方法主要有两个局限性。<strong>首先，这些方法需要预先计算光流，这在时间和空间上都是昂贵的。其次，简单地使用加权和或平均和（weighted or average sum）将学习到的特征与多段预测的最终结果进行融合，使其性能不如时间关系建模（temporal relationship modeling）。</strong><br></p>
+<p>&emsp;&emsp;另一种方法尝试使用3D CNN直接从RGB帧中学习时空特征[27,2,4,7,24]。 <strong>C3D[27]</strong>是第一个使用深度3D CNN学习时空特征的研究。 <strong>然而，大量的参数需要优化，缺乏高质量的大规模数据集，C3D的性能仍然不令人满意</strong>。 <strong>I3D[2]</strong>将ImageNet预训练的2D核(2D kernel)膨胀到3D，以捕获时空特征并使用另一个流（flow stream）对运动特征建模。 <strong>I3D在高质量大规模Kinetics数据集和双流设置的帮助下</strong>，在基准数据集上取得了非常有竞争力的性能。由于3D CNNs尝试沿输入通道学习局部相关性， <strong>STCNet[4]</strong>将其STC块插入到3D ResNet中，在整个网络层捕获空间通道和时间通道相关信息。 <strong>Slowfast[7]</strong>涉及到慢速路径来捕获空间语义和快速路径来捕获高分辨率的时序运动。虽然基于3D CNN的方法已经达到了最先进的性能，但它们仍然面临着繁重的计算，使得在现实世界中很难部署。<br></p>
+<p>&emsp;&emsp;为了解决3D CNNs计算量大的问题，提出了几种精度与速度之间的权衡（平衡）方法[28,37,42,41,25,20]。<strong>Tran等人、[28]和Xie等人</strong>讨论了时空卷积（spatiotemporal convolutions）的几种形式，包括在浅层中使用3D卷积和在较深层中(bottom -heavy)使用2D卷积或颠倒这些组合(top-heavy)。 <strong>P3D[20]和R(2+1)D</strong>[28]试图通过将三维卷积分解为二维空间卷积和一维时间卷积来降低三维卷积的成本。 <strong>TSM[19]</strong>通过沿时间维度移动部分信道进一步引入了时域卷积。<strong>我们提出的CSTM分支</strong>在学习时空特征的意义上与这些方法相似，而我们使用信道的（channel-wise）一维卷积来捕捉不同信道的不同时间关系。 <strong>虽然这些方法成功地平衡了3D CNNs的繁重计算量，但它们不可避免地需要具有光流的（a flow stream）双流网络的帮助来合并运动特征，以获得最佳的性能</strong>。运动信息是视频识别和图像识别的关键区别。然而，利用 <strong>TV-L1方法[38]</strong>计算光流在时间和空间上都是昂贵的。最近，人们提出了许多利用CNN估计光流的方法[5,14,6,21]，或探索光流的替代方法[33,39,26,18]。 <strong>TSN框架[33]</strong>使用了两帧之间的RGB差来表示视频中的运动。 <strong>Zhao等人[39]</strong>使用成本体积处理(cost volume processing)来模拟明显的运动。 <strong>光流导特征(Optical Flow guided Feature–OFF)[26]</strong>包含一套算子，包括sobel算子和OFF生成的元素减法运算子。 <strong>MFNet[18]</strong>采用5个固定的运动滤波器（fixed motion filters）作为运动块，在相邻的两个时间步之间寻找特征级的时间特征。 <strong>我们提出的CMM分支</strong>也是为了寻找更好的轻量级替代运动表示(motion representation)而设计的。 <strong>主要的区别是，我们每两个相邻的时间步就会学习不同通道的不同运动特征。</strong><br></p>
+<h2 id="3-Approach-方法"><a href="#3-Approach-方法" class="headerlink" title="3. Approach(方法)"></a>3. Approach(方法)</h2><p>&emsp;&emsp;在本节中，我们将介绍我们的方法的技术细节。首先，我们将描述所提出的CSTM和CMM，以展示如何分别执行信道级时空融合（perform the channel-wise spatiotemporal fusion）和提取特征级运动信息（extract the feature-level motion information）。然后，我们将展示这两个模块的组合，将它们组装成一个可插入现有ResNet体系结构中构建块，以形成我们的STM网络。<br></p>
+<h3 id="3-1-Channel-wise-SpatioTemporal-Module（CSTM）"><a href="#3-1-Channel-wise-SpatioTemporal-Module（CSTM）" class="headerlink" title="3.1. Channel-wise SpatioTemporal Module（CSTM）"></a>3.1. Channel-wise SpatioTemporal Module（CSTM）</h3><p>&emsp;&emsp;CSTM是为高效的空间和时序建模而设计的。CSTM通过引入有限的额外的计算成本，提取出丰富的时空特征，显著提高了时间相关动作识别的性能。如图2(a)所示，给出一个输入特征图 $F\in \mathbb{R}^{N\times T\times C\times H\times W}$ 我们首先将F变形为:$F\rightarrow F^{<em>}\in \mathbb{R}^{NHW\times C\times T}$,然后在T维上应用通道一维卷积来融合时间信息。与普通卷积相比，采用信道卷积主要有两个优点。首先，对于feature map $F^{</em>}$，不同通道的语义信息通常是不同的。我们认为不同信道的时序信息组合应该是不同的。<strong>因此，采用信道级卷积（channel-wise convolution）来学习每个信道的独立的卷积核（kernels）</strong>。其次，与普通卷积相比， <strong>计算成本可以降低一个因子G，其中G是组的数目。</strong> 在我们的设置中，G等于输入通道的数量。形式上，通道级的时间融合操作可以表示为:<br>$$G_{c,t}=\sum_{i}K_{i}^{c}F_{c,t+i}^{*}         (1)$$<br><br></p>
+<h3 id="3-2-Channel-wise-Motion-Module（CMM）"><a href="#3-2-Channel-wise-Motion-Module（CMM）" class="headerlink" title="3.2. Channel-wise Motion Module（CMM）"></a>3.2. Channel-wise Motion Module（CMM）</h3><p>&emsp;&emsp;<br></p>
+<h3 id="3-3-STM-Network"><a href="#3-3-STM-Network" class="headerlink" title="3.3. STM Network"></a>3.3. STM Network</h3><p>&emsp;&emsp; <strong>为了保持框架的效率和轻量级性，我们将提出的CSTM和CMM结合在一起，构建一个可以同时编码时空和运动特征的STM块，并且STM块可以轻松地插入现有的ResNet架构中。</strong> STM块的整体设计如图3的下半部分所示。在这个STM块中， <strong>第一个1x1 2D卷积层负责减少通道维数。</strong>压缩后的特征图（feature maps）分别通过CSTM和CMM提取时空和运动特征。通常，有两种方法来聚合不同类型的信息:求总和以及串联（summation and concatenation）。我们实验发现， <strong>求和</strong>比串联能更好地融合这两个模块。因此，在CSTM和CMM之后应用element-wise求和操作来聚合信息。然后 <strong>应用另一个1x1 2D卷积层恢复通道维数</strong>。与普通的残差块类似，我们还添加了一个从输入到输出的无参数标识快捷方式<br><br>&emsp;&emsp; <strong>由于所提出的STM块与普通的残差块兼容，我们可以简单地将其插入到任何现有的ResNet架构中</strong>，以非常有限的额外计算成本形成我们的STM网络。我们在图3的上半部分说明了STM网络的总体架构。 <strong>STM网络是一个二维卷积网络，它避免了任何三维卷积和预计算光流。</strong>除非特别说明，我们选择 <strong>2D ResNet-50[13]</strong>作为我们的骨干，以权衡其准确性和速度。我们用提出的STM块替换所有残差块。<br></p>
+<h2 id="4-Experiments-实验"><a href="#4-Experiments-实验" class="headerlink" title="4. Experiments(实验)"></a>4. Experiments(实验)</h2><p>&emsp;&emsp;<br></p>
+<h3 id="4-1-Datasets"><a href="#4-1-Datasets" class="headerlink" title="4.1. Datasets"></a>4.1. Datasets</h3><p>&emsp;&emsp;<br></p>
+<h3 id="4-2-Implementation-Details"><a href="#4-2-Implementation-Details" class="headerlink" title="4.2. Implementation Details"></a>4.2. Implementation Details</h3><p>&emsp;&emsp;<br></p>
+<h3 id="4-3-Results-on-Temporal-Related-Datasets"><a href="#4-3-Results-on-Temporal-Related-Datasets" class="headerlink" title="4.3. Results on Temporal-Related Datasets"></a>4.3. Results on Temporal-Related Datasets</h3><p>&emsp;&emsp;<br></p>
+<h3 id="4-4-Results-on-Scene-Related-Datasets"><a href="#4-4-Results-on-Scene-Related-Datasets" class="headerlink" title="4.4. Results on Scene-Related Datasets"></a>4.4. Results on Scene-Related Datasets</h3><p>&emsp;&emsp;<br></p>
+<h3 id="4-5-Ablation-Studies"><a href="#4-5-Ablation-Studies" class="headerlink" title="4.5. Ablation Studies"></a>4.5. Ablation Studies</h3><p>&emsp;&emsp;<br></p>
+<h3 id="4-6-Runtime-Analysis"><a href="#4-6-Runtime-Analysis" class="headerlink" title="4.6. Runtime Analysis"></a>4.6. Runtime Analysis</h3><p>&emsp;&emsp;<br></p>
+<h2 id="5-Conclusion（总结）"><a href="#5-Conclusion（总结）" class="headerlink" title="5. Conclusion（总结）"></a>5. Conclusion（总结）</h2><p>&emsp;&emsp;在本文中，我们提出了一种简单而有效的动作识别网络，将时空和运动特征编码在一个统一的二维CNN网络中。在ResNet架构中，我们用STM blocks代替原来的residual blocks来构建STM网络。一个STM blocks包含一个CSTM来对通道方向的时空特征（channel-wise spatiotemporal feature）进行建模，以及一个CMM来对通道方向的运动表征（model channel-wise motion representation）进行建模。与TSN基线相比，在没有任何3D卷积和预计算的光流的情况下，我们的STM在时间相关的数据集和场景相关的数据集上达到了最好的结果， with only 1.2% more FLOPs（只多1.2%的失败—再看下）。<br></p>
+
       
 
       
@@ -208,6 +255,25 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">行为识别</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">论文</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -258,7 +324,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://huitailangdeerzi.github.io/2018/03/20/小样本学习/新文档22/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://huitailangdeerzi.github.io/2019/11/13/行为识别论文/STM_zhejiangdaxue/STM/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -272,15 +338,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/03/20/小样本学习/hello/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          hello测试公式
-        
-      </div>
-    </a>
   
+    <a href="/2019/11/12/小样本学习/小样本学习1_paper/小样本学习_paper_1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">小样本学习论文</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -305,7 +367,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#STM-Spatio-Temporal-and-Motion-Encoding-for-Action-Recognition"><span class="toc-number">1.</span> <span class="toc-text">STM: Spatio Temporal and Motion Encoding for Action Recognition</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Abstract摘要"><span class="toc-number">1.1.</span> <span class="toc-text">Abstract摘要</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Introduction-简介"><span class="toc-number">1.2.</span> <span class="toc-text">1.Introduction 简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Related-Works（相关工作）"><span class="toc-number">1.3.</span> <span class="toc-text">2. Related Works（相关工作）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Approach-方法"><span class="toc-number">1.4.</span> <span class="toc-text">3. Approach(方法)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-Channel-wise-SpatioTemporal-Module（CSTM）"><span class="toc-number">1.4.1.</span> <span class="toc-text">3.1. Channel-wise SpatioTemporal Module（CSTM）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-Channel-wise-Motion-Module（CMM）"><span class="toc-number">1.4.2.</span> <span class="toc-text">3.2. Channel-wise Motion Module（CMM）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-STM-Network"><span class="toc-number">1.4.3.</span> <span class="toc-text">3.3. STM Network</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-Experiments-实验"><span class="toc-number">1.5.</span> <span class="toc-text">4. Experiments(实验)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-Datasets"><span class="toc-number">1.5.1.</span> <span class="toc-text">4.1. Datasets</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-Implementation-Details"><span class="toc-number">1.5.2.</span> <span class="toc-text">4.2. Implementation Details</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-Results-on-Temporal-Related-Datasets"><span class="toc-number">1.5.3.</span> <span class="toc-text">4.3. Results on Temporal-Related Datasets</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-Results-on-Scene-Related-Datasets"><span class="toc-number">1.5.4.</span> <span class="toc-text">4.4. Results on Scene-Related Datasets</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-5-Ablation-Studies"><span class="toc-number">1.5.5.</span> <span class="toc-text">4.5. Ablation Studies</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-6-Runtime-Analysis"><span class="toc-number">1.5.6.</span> <span class="toc-text">4.6. Runtime Analysis</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-Conclusion（总结）"><span class="toc-number">1.6.</span> <span class="toc-text">5. Conclusion（总结）</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
