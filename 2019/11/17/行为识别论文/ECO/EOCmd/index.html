@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://huitailangdeerzi.github.io">
-  <title>Archives: 2019 | 王辉的博客</title>
+  <title>行为识别论文 | 王辉的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="代码的搬运工。">
-<meta name="keywords" content="论文，深度学习，行为检测，杂记">
-<meta property="og:type" content="website">
-<meta property="og:title" content="王辉的博客">
-<meta property="og:url" content="https://huitailangdeerzi.github.io/archives/2019/index.html">
+  <meta name="description" content="ECO: Eﬃcient Convolutional Network for Online Video Understanding （用于在线视频理解的高效卷积网络）ECO:">
+<meta name="keywords" content="算法,论文,行为识别">
+<meta property="og:type" content="article">
+<meta property="og:title" content="行为识别论文">
+<meta property="og:url" content="https://huitailangdeerzi.github.io/2019/11/17/行为识别论文/ECO/EOCmd/index.html">
 <meta property="og:site_name" content="王辉的博客">
-<meta property="og:description" content="代码的搬运工。">
+<meta property="og:description" content="ECO: Eﬃcient Convolutional Network for Online Video Understanding （用于在线视频理解的高效卷积网络）ECO:">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-11-19T13:17:51.698Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="王辉的博客">
-<meta name="twitter:description" content="代码的搬运工。">
+<meta name="twitter:title" content="行为识别论文">
+<meta name="twitter:description" content="ECO: Eﬃcient Convolutional Network for Online Video Understanding （用于在线视频理解的高效卷积网络）ECO:">
   
     <link rel="alternative" href="/atom.xml" title="王辉的博客" type="application/atom+xml">
   
@@ -158,36 +159,86 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-行为识别论文/ECO/EOCmd" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      行为识别论文
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/17/行为识别论文/ECO/EOCmd/" class="archive-article-date">
+
+        
+        <a href="/2019/11/17/行为识别论文/ECO/EOCmd/" class="archive-article-date">
   	<time datetime="2019-11-17T10:27:03.043Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-17</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/17/行为识别论文/ECO/EOCmd/">行为识别论文</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="ECO-Eﬃcient-Convolutional-Network-for-Online-Video-Understanding-（用于在线视频理解的高效卷积网络）"><a href="#ECO-Eﬃcient-Convolutional-Network-for-Online-Video-Understanding-（用于在线视频理解的高效卷积网络）" class="headerlink" title="ECO: Eﬃcient Convolutional Network for Online Video Understanding （用于在线视频理解的高效卷积网络）"></a>ECO: Eﬃcient Convolutional Network for Online Video Understanding （用于在线视频理解的高效卷积网络）</h1><p>ECO:</p>
+<a id="more"></a>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      <!--$表示行内元素，$$表示块状元素 -->
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
 
-        <div class="article-info info-on-right">
-          
+<h2 id="Abstract摘要"><a href="#Abstract摘要" class="headerlink" title="Abstract摘要"></a>Abstract摘要</h2><p>&emsp;&emsp;在视频理解最先进的方法中存在两个问题:(1)推理的主要部分是在视频中局部执行的，因此，它忽略了持续几秒的动作中的重要关系。(2)虽然有快速帧处理的局部方法，但整个视频的处理效率不高，不利于长期活动（long-term activities）的快速视频检索或在线分类。 <strong>在本文中，我们介绍了一个网络架构，它考虑了长期的内容（long-term content ），同时支持快速的视频处理。</strong>该体系结构是基于合并网络中已经存在的长期内容，而不是基于在此之后的融合。再加上一个采样策略，利用相邻帧基本上是冗余的，这将产生高质量的动作分类和视频字幕，最高可达每秒230个视频，其中每个视频可以由几百个帧组成。该方法在所有数据集上都能获得具有竞争力的性能，同时比最先进的方法快10到80倍。<br><br>Keywords:在线视频的理解, &emsp; 实时的, &emsp; 动作识别,&emsp;视频字幕<br></p>
+<h2 id="1-Introduction-简介"><a href="#1-Introduction-简介" class="headerlink" title="1 Introduction(简介)"></a>1 Introduction(简介)</h2><p>&emsp;&emsp;视频理解，特别是动作分类，从深度学习和近年来创建的更大的数据集中受益良多。<strong>新的数据集</strong>，如Kinetics [20]， ActivityNet [13]， somethingsome[10]为该领域提供了更多的多样性和真实性。 <strong>深度学习</strong>在交互帧率下（interactive frame rates）可以提供强大的分类器，也能支持像实时动作检测[30]等应用。 <br><br>&emsp;&emsp;虽然动作检测可以在短时间内快速确定当前的动作，其速度足以实时运行， <strong>但是活动理解则涉及到可能持续几秒钟的较长活动，需要融合上下文来达到完全准确。</strong>已经提出了几种 <strong>3D CNN架构</strong>来捕捉帧之间的时间关系，但是它们的计算开销很大，因此只能覆盖相对较小的窗口，而不能覆盖整个视频。 <strong>现有的方法</strong>通常使用一些基于窗口分数的后融合，这对于利用窗口之间的时间关系来说是欠佳的。 <br><br>&emsp;&emsp; 在本文中，我们介绍了一种直接的、端到端可训练的体系结构，它利用 <strong>两个重要原则</strong>来避免上述困境。 <strong>首先，</strong>一个动作的良好的初始分类已经可以从一个单一的帧中获得。帧的时间邻域主要由冗余信息组成，对于提高当前动作的置信度几乎毫无用处。 <strong>因此，我们使用二维卷积结构来有效地处理时间邻域的单个帧，以捕获该帧的外观特征。</strong>  <strong>其次，</strong>要获取距离较远的帧之间的上下文关系，简单的分数加和（总分）是不够的。 <strong>因此，我们将远距离帧的特征表示输入到一个三维网络中，该网络可以学习这些帧之间的时序上下文，因此可以显著地改善从单一帧中获得的置信度——特别是对于复杂的长时间活动。</strong>这一原理与所谓早期或晚期的融合有很大的关系，这种融合用于将双流架构[8]中的RGB流和光流结合起来。然而，到目前为止，这个原理在融合方面一直被忽视，并且不是最先进的方法的一部分。<br><br>&emsp;&emsp; 这两个原理的一起实现会产生一个没有花里胡哨的（华而不实）高精度的分类器。复杂动作的长时间上下文可以被完全捕获，而事实上， <strong>该方法只查看视频中所有帧的一小部分，这导致了对整个视频的极其快速的处理。</strong>这是非常有益的，特别是在视频检索应用。<br><br>&emsp;&emsp;此外，这种方法为在线视频理解打开了可能性。 <strong>在本文中，我们还提出了一种在在线环境中使用我们的体系结构的方法，在在线环境中，我们提供了对动作的快速初步猜测，并使用更长的上下文将其细化为更复杂的活动。</strong>与最近的[30]的在线动作检测相比，该方法不仅提供了快速的反应时间，而且还考虑了更长的上下文。 <br><br>&emsp;&emsp;我们对各种视频理解问题进行了实验，包括动作识别和视频字幕。虽然我们 <strong>只使用RGB图像作为输入</strong>，但是在大多数数据集上的，与最新方法相比，我们获得了与标准相当或良好的性能。运行时与准确性之间的权衡在所有数据集上都是更好的。 <br></p>
+<h2 id="2-Related-Work-相关工作"><a href="#2-Related-Work-相关工作" class="headerlink" title="2 Related Work(相关工作)"></a>2 Related Work(相关工作)</h2><p>&emsp;&emsp;Video classification with deep learning.视频分类与深度学习。最近关于视频分类的研究多基于深度学习[6,19,29,34,48]。为了研究视频的时序上下文，3D卷积网络是一个明显的选择。<strong>Tran等人提出了一种具有3D卷积核的3D体系结构，用于从一系列帧中学习时空特征。</strong>在后来的工作中，他们研究了带有3D卷积的Resnet架构的使用，与早期C3D架构[34]相比有了一定的改进。另一种方法是使用 <strong>循环网络[6,24,25]</strong>对帧间的时序关系进行建模。 <strong>Donahue等人</strong>使用LSTM来融合CNN的特性。 <strong>然而，目前循环网络[6,24,25]在动作识别方面的性能落后于最近的基于cnn的方法，这可能是它们对长期动态的建模不够充分[24,25]。</strong>近年来，多部工作利用3D架构进行动作识别[5,48,39,35]。这些方法基于滑动窗口对输入视频的短期时间上下文进行建模。在推理时，这些方法必须计算多个窗口的平均分数，这非常耗时。例如，ARTNet[39]平均需要250个样本来分类一个视频。  <br><br>&emsp;&emsp; 所有这些方法在训练和推理过程中都没有充分利用整个视频的综合信息。部分观察不仅会造成动作预测的混乱，还需要额外的后续处理步骤来融合分数。额外的特征/分数融合降低了视频处理的速度，并使该方法无法在实时情况下工作。<br><br>&emsp;&emsp;Long-term representation learning 。长期表征学习。为了解决部分观测的问题，一些方法提高了滑动窗口的时间分辨率[36,4]。然而， <strong>扩展输入的时间长度有两个主要缺点</strong>。(1)计算量大，(2)仍然不能覆盖整个视频的视觉信息，特别是对于较长的视频。<br><br>&emsp;&emsp;有文献提出了从样本中学习视频表示的编码方法[42,28,26]。在这些方法中，通常独立计算每一帧的特征，并随着时间的推移进行融合，形成视频级的表示。这忽略了帧之间的关系 <br><br>&emsp;&emsp;为了获取长期信息，近期的文献[3,2,7,40]采用了 <strong>稀疏全局时间采样的方法</strong>，在训练过程中从整个视频中选择帧。与上面的融合方法一样，在TSN模型[40]中， <strong>帧在推理时独立处理，它们的分数最后才融合。因此，当他们改变采样的数量时，他们的实验性能保持不变</strong>，这表明他们的模型并没有真正从长范围的时间信息中受益。 <br><br>&emsp;&emsp;我们的工作与之前的方法主要有三个方面的不同:(1)与TSN类似，我们从整个视频中 <strong>抽取固定数量的帧</strong>来覆盖对视频的长期时间结构的理解。这样，采样的帧跨越整个视频，而不依赖于视频的长度。(2)与TSN相比，我们 <strong>使用3d网络</strong>来学习整个视频中帧之间的关系。网络经过端到端的训练来学习这种关系。(3)网络 <strong>直接提供视频等级的分数</strong>，不需要后续的特征融合（聚合）。因此，它甚至可以在小型计算设备上以联机模式和实时方式运行。 <br><br>&emsp;&emsp; Video Captioning.视频字幕。视频字幕是计算机视觉中一个被广泛研究的问题[14,45,43,9]。大多数方法使用一个预先在图像分类或动作识别训练的 <strong>CNN来生成特征</strong>[9,43,45]。这些方法与上面描述的视频理解方法一样，利用基于帧的特征融合(如Resnet或TSN)或整个视频上的滑动窗口(如C3D)来生成视频级特征。然后将特征传递给循环神经网络(如LSTM)，通过学习语言模型生成视频字幕。提取的视觉特征既要体现视频的时间结构，又要体现场景的静态语义。然而，大多数方法都存在时序上下文提取不恰当的问题。利用本工作中的网络模型，我们解决了这个问题，从而提高了视频字幕的效果<br><br>&emsp;&emsp;Real-time and online video understanding.实时和在线视频理解。深度学习加速了图像分类，但视频分类在速度上仍存在挑战。一些工作涉及实时视频理解[18,44,30,31]。 <strong>EMV[18]</strong>介绍了一种快速计算运动向量的方法。尽管有了这些改进，视频处理仍然很慢。 <strong>Kantorov[18]</strong>提出了一种快速密集轨迹方法。 <strong>其他的研究</strong>使用了基于帧的手工制作的特征来进行在线动作识别[15,22]。这些方法中特征提取的准确性和速度都远不如深度学习方法。 <strong>Soomro等人</strong>提出了一种在线动作定位方法。他们的模型使用了一种昂贵的分割方法，因此不能实时工作。最近， <strong>Singh等人</strong>提出了一种基于40fps帧级检测的在线检测方法。我们将在第5节中比较后两种方法。 <br></p>
+<h2 id="3-Long-term-Spatio-temporal-Architecture-相关工作"><a href="#3-Long-term-Spatio-temporal-Architecture-相关工作" class="headerlink" title="3 Long-term Spatio-temporal Architecture(相关工作)"></a>3 Long-term Spatio-temporal Architecture(相关工作)</h2><p>&emsp;&emsp;网络结构如图1所示。一个具有可变帧数的完整视频作为网络的输入。视频被分成N个大小相等的子部分S<sub>i</sub>, i = 1，…,在每个分段中，恰好随机采样一帧。每个帧都由一个二维卷积网络(权值共享)处理，该网络生成一个特征表示，其对帧的外观进行了编码。通过对覆盖整个视频的时间片段的帧进行联合处理，我们确保能够捕捉到一个动作在一段时间内最相关的部分，以及这些部分之间的关系。 <br><br>&emsp;&emsp; <strong>随机采样帧的位置比总是使用相同的位置更有优势</strong>，因为它在训练过程中带来了更多的多样性，并使网络能适应不同动作实例的变化。注意，这种处理是利用训练期间视频的所有帧来对变化建模。同时，网络在运行时只能处理N帧，这使得这种方法非常快。我们还考虑了更聪明的分区策略（partitioning strategies），即考虑子部分的内容。但是，这样做的缺点是必须在运行时处理视频的每一帧来获得分区，而且这种智能分区的实际改进是有限的，因为大多数变化已经在训练期间被随机采样捕获。 <br><br>&emsp;&emsp;到目前为止，视频中的不同帧都是独立处理的。为了了解随着时间的推移，动作是如何由场景的不同外观组成的，我们将所有帧的表示叠加起来，并将它们输入到一个3D卷积网络中。这个网络生成最终的action类别标签。 <br><br>&emsp;&emsp;该体系结构非常简单，很明显，它可以直接在action类标签和大型数据集上进行有效的端到端训练。它也是一种很容易适应其他视频理解任务的架构，我们将在后面的视频字幕部分5.4中介绍。 <br></p>
+<h3 id="3-1-ECO-Lite-and-ECO-Full"><a href="#3-1-ECO-Lite-and-ECO-Full" class="headerlink" title="3.1 ECO Lite and ECO Full"></a>3.1 ECO Lite and ECO Full</h3><p>&emsp;&emsp;ECO Lite中的3D架构针对学习帧之间的关系进行了优化，但如果只是从静态图像内容中识别简单的短期动作，则会浪费这种能力。因此，我们提出了一种利用并行的二维网络进行框架扩展的方法;见图2 (B)。对于简单的动作，这种二维网络结构可以简化处理，并确保静态图像特征得到必要的重视，而三维网络结构则处理依赖于帧之间关系的更复杂的动作 <br><br>&emsp;&emsp;二维网络接收所有采样的特征图，生成N个特征表示。然后，我们应用平均池得到一个代表静态场景语义的特征向量。我们将整个架构称为ECO，而将图2(A) 中，更简单的架构称为ECO Lite。 <br></p>
+<h3 id="3-2-Network-details"><a href="#3-2-Network-details" class="headerlink" title="3.2 Network details"></a>3.2 Network details</h3><p>&emsp;&emsp;2D-Net:对于分析单帧的2D网络(H<sub>2D</sub>)，我们使用了 <strong>BN-Inception架构</strong>的第一部分(直到inception-3c层)[17]。详情见补充资料。 <strong>它有2D过滤器和带批处理归一化的池化卷积核</strong>。我们选择这个架构是因为它的效率。每一帧的H<sub>2D</sub> <strong>输出由96张尺寸为28×28的特征图组成。</strong> <br><br>&emsp;&emsp;3D-Net: 对于3D网络H<sub>3D</sub>，我们采用了多层的 <strong>3D- resnet18[34]架构</strong>，这是一种高效的架构，在许多视频分类工作中都有使用[34,39]。关于体系结构的详细信息在补充材料中提供。H<sub>3D</sub>的输出是不同类标签的一个 <strong>one-hot向量</strong>。<br><br>&emsp;&emsp;2D-NetS :在ECO full设计中，我们将 <strong>2d -net与3D-net并行</strong>，直接提供视频的静态视觉语义信息。对于这个网络，我们使用从 <strong>inception-4a层到最后的池化层[17]的BN-Inception架构</strong>。最后一个池化层将为 <strong>每一帧生成1024维的特征向量</strong>。我们利用平均池生成视频级特征，然后与来自3D-net的特征进行串联（连接）。 <br></p>
+<h3 id="3-3-Training-details"><a href="#3-3-Training-details" class="headerlink" title="3.3 Training details"></a>3.3 Training details</h3><p>&emsp;&emsp; 我们使用 <strong>Nesterov动量的小批量SGD</strong>来训练我们的网络，并在每个全连接层利用dropout。 <strong>我们将每个视频分成N个片段，并从每个片段中随机选择一帧。</strong>这种采样提供了对变化的鲁棒性，并使网络能够充分利用所有帧。此外，我们还应用了[41]中引入的 <strong>数据扩展技术</strong>:我们将输入帧的大小调整为240×320，并采用固定角剪切和尺度抖动与水平翻转(采样提供的时间抖动)。然后，我们对每像素进行平均减法操作和调整裁剪区域的大小为224×224。<br><br>&emsp;&emsp;初始学习率为0.001，当4个周期后验证集错误饱和，学习率降低了10倍。我们训练网络的动量(momentum)为0.9，重量衰减为0.0005，小批量为32。 <br><br>&emsp;&emsp; 我们使用 <strong>BN-Inception架构</strong>[17]在Kinetics上预先训练的权重初始化2D-Net的权重，如[41]所提供的。同样的，我们使用 <strong>预训练的3D-Resnet-18模型</strong>，如[39]提供的，用于初始化我们的3D-Net的权重。然后，我们在Kinetics数据集上对ECO和ECO Lite进行了10个周期的训练。<br><br>&emsp;&emsp; 对于其他数据集，我们在新数据集上对上述ECO/ECO Lite模型进行了调整。由于 Something-Something数据集的复杂性，我们对网络进行了 <strong>25个周期</strong>的优化，每10个周期将学习率降低10倍。对于其余部分，我们对 <strong>4k迭代</strong>进行了优化，当验证损失达到饱和时，学习率将下降10倍。ECO 整个架构在UCF101和HMDB51数据集上的训练过程，是在一个Tesla P100 GPU 上进行的，大约需要3个小时。我们根据数据集的大小调整了dropout率和迭代次数。<br></p>
+<h3 id="3-4-Test-time-inference"><a href="#3-4-Test-time-inference" class="headerlink" title="3.4 Test time inference"></a>3.4 Test time inference</h3><p>&emsp;&emsp;最先进的方法对网络结果进行一些后处理。例如，TSN和ARTNet[41,39]为每个视频收集了25个独立的帧/卷，对于每个帧/卷，通过对角度和中心的裁剪以及水平翻转对10个区域进行采样。 <strong>最后的预测是通过 对250个样本的得分进行平均得到的。</strong>这种在测试时进行的推理计算量大，因此不适合实时设置。 <br><br>&emsp;&emsp;相比之下，我们的网络直接为整个视频生成动作标签，没有任何额外的聚合。 <strong>我们从视频中采样N帧，只应用中心裁剪，</strong>然后将它们直接提供给网络，通过一遍就可以为整个视频提供预测。<br> <br></p>
+<h2 id="4-Online-video-understanding"><a href="#4-Online-video-understanding" class="headerlink" title="4 Online video understanding"></a>4 Online video understanding</h2><p>&emsp;&emsp;大多数工作在批处理模式的视频理解过程，他们假设 <strong>整个视频在处理开始时是可用的</strong>。但是，在一些应用场景中， <strong>视频将以流的形式提供</strong>，并且当前的置信度应该随时可用。这样的在线处理可以通过滑动窗口的方式实现，但同时也有窗口大小的限制，即长范围的上下文是缺失的，或者有很长一段时间的延迟 <br><br>&emsp;&emsp;在本节中，我们还将展示如何调整ECO以非常有效地方式在在线模式下运行。 <strong>修改只影响采样部分，保持网络结构不变</strong>。为此，我们将传入的视频内容划分为N帧的片段，其中N也是进入网络的帧数。 <strong>我们使用一个工作存储器S<sub>N</sub>，它总是由N个样本和一个时间戳组成</strong>。当视频开始时，即，只有N帧可用，所有N帧密集采样，并存储在工作存储器S<sub>N</sub>中。每增加一个新的时间段，增加N帧，我们用这个时间段的样本替换S<sub>N</sub>中一半的样本，并更新网络的预测;参见图3。当我们替换S<sub>N</sub>的样本时，我们一致地替换了之前时间段的样本。这确保了可以实时地预测更改，同时通过工作内存逐渐淡出，考虑到了时间上下文。关于S<sub>N</sub>更新的细节如算法1所示。 <br><br>&emsp;&emsp;ECO的在线方式在Tesla P100 GPU上以675帧/秒(在ECO Lite下是970帧/秒)的速度运行。此外，该模型仅保留精确的N帧，从而提高了内存效率。这也支持在更小的硬件上实现，比如移动设备。补充材料中的视频记录了实时ECO在线版本的性能。<br></p>
+<h2 id="5-Experiments"><a href="#5-Experiments" class="headerlink" title="5 Experiments"></a>5 Experiments</h2><p>&emsp;&emsp;我们在不同的视频理解问题上评估了我们的方法，以显示该方法的泛化能力。我们在最常见的动作分类数据集上评估了我们的网络架构，以便将其性能与最先进的方法进行比较。这包括较老但仍然很流行的数据集UCF101[32]和HMDB51[21]，以及较新的数据集 Kinetics [20] and Something-Something [10]。此外，我们将该架构应用于视频字幕，并在广泛使用的Youtube2text数据集[11]上进行了测试。对于所有这些数据集，我们使用作者提供的标准评估协议。<br><br>&emsp;&emsp; <strong>这种比较仅限于将原始的RGB视频作为输入，而不进行进一步的预处理的方法</strong>，例如，通过提供光流或人体姿态。术语ECO<sub>NF</sub>描述了一个获得N个采样帧作为输入的网络。术语ECO<sub>En</sub>指的是在{16,20,24,32}帧数的网络集合中获得的平均分数。<br></p>
+<h3 id="5-1-Benchmark-Comparison-on-Action-Classification"><a href="#5-1-Benchmark-Comparison-on-Action-Classification" class="headerlink" title="5.1 Benchmark Comparison on Action Classification"></a>5.1 Benchmark Comparison on Action Classification</h3><p>&emsp;&emsp;ECO在不同数据集上获得的结果如表1、表2和表3所示，并将它们与当前最先进的方法进行比较。对于UCF-101、HMDB-51和 Kinetics，ECO优于除I3D之外的所有现有方法，I3D使用了一个更重的网络。在 Something-Something数据集上，它比其他方法有很大的优势。这表明了相对简单和小的ECO架构的强大性能。<br></p>
+<h3 id="5-2-Accuracy-Runtime-Comparison"><a href="#5-2-Accuracy-Runtime-Comparison" class="headerlink" title="5.2 Accuracy-Runtime Comparison"></a>5.2 Accuracy-Runtime Comparison</h3><p>&emsp;&emsp;当我们查看表4和图4所示的准确性与运行时之间的权衡时，ECO架构的优势变得更加突出。ECO架构以更快的速度产生与其他方法相同的精度。<br><br>&emsp;&emsp;以前的工作通常以 <strong>每秒帧数(fps)</strong>来度量方法的速度。我们的ECO模型在Tesla P100 GPU上以675 fps(在ECO Lite下是970 fps)的速度运行。但是， <strong>这并没有反映处理整个视频所需的时间</strong>。这与TSN和我们的方法有关，我们的方法不查看视频的每一帧，并激励我们记录 <strong>每秒视频数(vps)</strong>，以比较视频理解方法的速度。<br><br>&emsp;&emsp;ECO处理视频的速度至少比其他方法快一个数量级，这使它成为视频检索应用程序的优秀架构。<br><br>&emsp;&emsp;Number of sampled frames.采样帧数。表5比较了ECO和ECO Lite两种架构，并评估了采样帧数n的影响。正如预期的那样， <strong>当采样帧数减少时，精度会下降，因为子部分变长，可能会错过动作的重要部分</strong>。 <strong>对于快速动作</strong>，如“掷铁饼”，尤其如此。然而，即使只有4个样本，ECO的准确性仍然远远优于文献中的大多数方法，因为ECO考虑了视频中这4个片刻之间的关系，即使它们相距很远。甚至从图6可以看出， <strong>对于简单的短期动作</strong>，当使用更多的样本时，性能会下降。乍一看，这是令人惊讶的，但可以解释为，因为对于简单的动作，当提供给3D网络的通道较少时，更好地利用网络的能力。<br><br>&emsp;&emsp;ECO vs. ECO Lite. <strong>完整的ECO体系结构比简单的ECO Lite体系结构产生的结果稍微好一些，但是也稍微慢一些。</strong>两种体系结构之间在准确性和运行时方面的差异通常可以通过使用更多或更少的样本来弥补。比起其他数据集，在 Something-Something 数据集上,时序上下文扮演更重要的角色(见图5)，ECO Lite的执行效果和完整的ECO架构一样好，即使相同数量的输入样本,这是因为单个图像线索的原始处理与此数据集的相关性很小。<br></p>
+<h3 id="5-3-Early-Action-Recognition-in-Online-Mode"><a href="#5-3-Early-Action-Recognition-in-Online-Mode" class="headerlink" title="5.3 Early Action Recognition in Online Mode"></a>5.3 Early Action Recognition in Online Mode</h3><p>&emsp;&emsp;图7在在线模式下评估了我们的方法，并显示了该方法需要多少帧才能实现其最好精度。我们在J-HMDB数据集上运行了这个实验，因为这个数据集上有来自其他在线方法的结果。与现有的方法相比，ECO可以更快地达到很好的精度，并且在更高的绝对精度下饱和。<br></p>
+<h3 id="5-4-Video-Captioning"><a href="#5-4-Video-Captioning" class="headerlink" title="5.4 Video Captioning"></a>5.4 Video Captioning</h3><p>&emsp;&emsp;为了显示ECO架构的广泛适用性，我们还将其与视频字幕网络相结合。为此，我们使用在 Kinetics 上经过预训练ECO来分析视频内容，并对字幕训练最先进的语义组合网络（Semantic Compositional Network）[9]。我们在Youtube2Text (MSVD)数据集[11]上进行了评估，该数据集包含1,970个视频剪辑，平均时长为9秒，涵盖了各种类型的视频，如体育、风景、动物、烹饪和人类活动。数据集包含80839个句子，每个视频都有大约40个句子。<br><br>&emsp;&emsp;表6显示，ECO在所有流行的评估指标(BLEU[27]、METEOR[23]、CIDEr[37])上都优于以前的方法。即使是ECO Lite也已经达到了ResNet在ImageNet上预先训练后的水平。将ECO的特性与ResNet的特性连接起来可以进一步改进结果。与改进后的数字相对应的定性示例如表7所示。<br></p>
+<h2 id="6-Conclusions"><a href="#6-Conclusions" class="headerlink" title="6 Conclusions"></a>6 Conclusions</h2><p>&emsp;&emsp;在本文中，我们提出了一种简单且非常有效的网络架构，它只关注视频中的一小部分帧，并学会利用这些帧之间的时间上下文。这个原理可以用于各种视频理解任务。我们在动作分类、在线动作分类和视频字幕方面取得了优秀的成果。计算负载和内存占用使得在移动设备上实现成为一个可行的未来选择。这种方法比最先进的方法快10到80倍。<br><br></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -207,186 +258,119 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://huitailangdeerzi.github.io/2019/11/17/行为识别论文/ECO/EOCmd/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/13/行为识别论文/STM_zhejiangdaxue/STM/" class="archive-article-date">
-  	<time datetime="2019-11-13T01:59:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-13</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/11/13/行为识别论文/STM_zhejiangdaxue/STM/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">行为识别论文</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/13/行为识别论文/STM_zhejiangdaxue/STM/">行为识别论文</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">论文</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">行为识别</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#ECO-Eﬃcient-Convolutional-Network-for-Online-Video-Understanding-（用于在线视频理解的高效卷积网络）"><span class="toc-number">1.</span> <span class="toc-text">ECO: Eﬃcient Convolutional Network for Online Video Understanding （用于在线视频理解的高效卷积网络）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Abstract摘要"><span class="toc-number">1.1.</span> <span class="toc-text">Abstract摘要</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Introduction-简介"><span class="toc-number">1.2.</span> <span class="toc-text">1 Introduction(简介)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Related-Work-相关工作"><span class="toc-number">1.3.</span> <span class="toc-text">2 Related Work(相关工作)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Long-term-Spatio-temporal-Architecture-相关工作"><span class="toc-number">1.4.</span> <span class="toc-text">3 Long-term Spatio-temporal Architecture(相关工作)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-ECO-Lite-and-ECO-Full"><span class="toc-number">1.4.1.</span> <span class="toc-text">3.1 ECO Lite and ECO Full</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-Network-details"><span class="toc-number">1.4.2.</span> <span class="toc-text">3.2 Network details</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-Training-details"><span class="toc-number">1.4.3.</span> <span class="toc-text">3.3 Training details</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-Test-time-inference"><span class="toc-number">1.4.4.</span> <span class="toc-text">3.4 Test time inference</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-Online-video-understanding"><span class="toc-number">1.5.</span> <span class="toc-text">4 Online video understanding</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-Experiments"><span class="toc-number">1.6.</span> <span class="toc-text">5 Experiments</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-Benchmark-Comparison-on-Action-Classification"><span class="toc-number">1.6.1.</span> <span class="toc-text">5.1 Benchmark Comparison on Action Classification</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-Accuracy-Runtime-Comparison"><span class="toc-number">1.6.2.</span> <span class="toc-text">5.2 Accuracy-Runtime Comparison</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-3-Early-Action-Recognition-in-Online-Mode"><span class="toc-number">1.6.3.</span> <span class="toc-text">5.3 Early Action Recognition in Online Mode</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-4-Video-Captioning"><span class="toc-number">1.6.4.</span> <span class="toc-text">5.4 Video Captioning</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-Conclusions"><span class="toc-number">1.7.</span> <span class="toc-text">6 Conclusions</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/12/小样本学习/小样本学习1_paper/小样本学习_paper_1/" class="archive-article-date">
-  	<time datetime="2019-11-12T04:50:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-12</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/12/小样本学习/小样本学习1_paper/小样本学习_paper_1/">小样本学习论文</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">小样本学习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">论文</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/06/小样本学习/新文档/" class="archive-article-date">
-  	<time datetime="2019-11-06T06:46:04.318Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/06/小样本学习/新文档/">Hello World哈哈哈哈哈</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/06/小样本学习/王辉第一个博客/" class="archive-article-date">
-  	<time datetime="2019-11-06T05:17:28.971Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-06</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/06/小样本学习/hello-world/" class="archive-article-date">
-  	<time datetime="2019-11-06T05:17:28.959Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/06/小样本学习/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -409,8 +393,8 @@
 	var yiliaConfig = {
 		mathjax: ,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
